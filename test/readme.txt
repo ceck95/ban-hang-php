@@ -1,0 +1,1 @@
+edit the global.inc.php file and gill out neccesarry connection info .

@@ -1,0 +1,170 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+@font-face{
+	font-family: BloggerSans;
+	src: url(font/BloggerSans.ttf);
+}
+body, html{
+	font-family: BloggerSans;
+	font-size: 16px;
+}
+.login_main{
+	background: #515151;
+	height: 70vh;
+	position: relative;
+	padding-top: 30vh;
+}
+.login_main h3{
+	color: #efefef;	
+	text-align: center;
+	padding: 30px 0 10px;
+}
+.login_main div{
+	width: 30%;
+	margin: auto;
+	border: 1px solid #000;
+	box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5), 0 5px 20px 0 rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5), 0 5px 20px 0 rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5), 0 5px 20px 0 rgba(0, 0, 0, 0.5);
+	position: relative;
+    box-sizing: border-box;
+}
+input{
+	border: none;
+	outline-style: none;
+}
+.login_main input[type=text],
+.login_main input[type=password]{
+	width: calc(70% - 12px);
+	padding: 15px 0 15px 10px;
+	background: #515151;
+	border: 1px solid #000;
+	margin: 10px 15% 0;
+	
+}
+.login_main input[type=text].nn_active,
+.login_main input[type=password].nn_active{
+	border-color: #FF530D;
+}
+.login_main input[type=checkbox]{
+	margin: 0 0 0 15%;
+}
+.login_main label{
+	color: #efefef;
+	cursor: pointer;
+}
+.login_main button{
+	background: #2A3B42;
+	border: none;
+	cursor: pointer;
+	padding: 10px 0;
+	width: 70%;
+	margin: 10px 15%;
+	color: #efefef;
+	float: left;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none; 
+}
+.login_error{
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	background: #FF530D;
+	color: #efefef;
+	padding: 10px;
+	animation-name: status;
+	animation-duration: 1.5s;
+	-webkit-animation-name: status;
+	-webkit-animation-duration: 1.5s;
+	transition: all ease 2.5s;
+}
+.login_error.hide{
+	right: -50%;
+}
+@-webkit-keyframes status{
+	0%{ right: -50%; }
+	100%{ right: 0; }
+}
+/*
+* responsive
+*/
+@media screen and ( max-width: 597px ){
+	.login_main{
+		height: 80vh;
+		padding-top: 20vh;
+	}
+	.login_main div{
+		width: calc( 100% - 20px );
+		padding-bottom: 10px;
+	}	
+	.login_main input[type=text],
+	.login_main input[type=password]{
+		width: calc(100% - 20px);
+		padding: 15px 0 15px 10px;
+		margin: 10px 5px;
+	}
+	.login_main button{
+		background: #2A3B42;
+		border: 1px solid transparent;
+		cursor: pointer;
+		padding: 10px 0;
+		width: calc(100% - 20px);
+		margin: 10px 10px;
+	}
+	.login_error.hide{
+		right: -100%;
+	}
+}
+@media screen and (min-width: 598px ) and (max-width: 768px ){
+	.login_main{
+		height: 70vh;
+		padding-top: 30vh;
+	}
+	.login_main div{
+		width: calc( 80% - 20px );
+		padding-bottom: 10px;
+	}	
+	.login_main input[type=text],
+	.login_main input[type=password]{
+		width: calc(70% - 20px);
+		padding: 15px 0 15px 10px;
+		margin: 10px calc( 15% + 5px );
+	}
+	.login_main button{
+		padding: 10px 0;
+		width: calc(70% - 20px);
+		margin: 10px calc( 15% + 10px );
+	}
+	.login_error.hide{
+		right: -100%;
+	}
+}
+@media screen and ( min-width: 769px ) and ( max-width: 1024px ){
+	.login_main{
+		height: 70vh;
+		padding-top: 30vh;
+	}
+	.login_main div{
+		width: calc( 50% - 20px );
+		padding-bottom: 10px;
+	}	
+	.login_main input[type=text],
+	.login_main input[type=password]{
+		width: calc(70% - 20px);
+		padding: 15px 0 15px 10px;
+		margin: 10px calc( 15% + 5px );
+	}
+	.login_main button{
+		padding: 10px 0;
+		width: calc(70% - 20px);
+		margin: 10px calc( 15% + 10px );
+	}
+	.login_error.hide{
+		right: -100%;
+	}	
+}
